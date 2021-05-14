@@ -27,9 +27,8 @@ fun MainScreen() {
         MapPreview()
         HorizontalPager(
             modifier = Modifier
-                .align(Alignment.BottomCenter)
-                .fillMaxWidth()
-                .padding(bottom = 32.dp),
+                .align(Alignment.Center)
+                .fillMaxWidth(),
             state = pagerState,
             itemSpacing = 8.dp,
         ) { page ->
