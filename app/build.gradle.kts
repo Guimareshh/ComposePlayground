@@ -30,29 +30,30 @@ android {
 
     kotlinOptions {
         jvmTarget = "1.8"
-        useIR = true
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-beta06"
+        kotlinCompilerExtensionVersion = "1.0.0-beta07"
     }
-
-    flavorDimensions("default")
 }
 
 dependencies {
 
+    implementation("androidx.appcompat:appcompat:1.3.0-rc01")
     implementation("androidx.activity:activity-ktx:1.2.3")
 
     /*** Compose Libraries ***/
-    implementation("androidx.activity:activity-compose:1.3.0-alpha07")
-    implementation("androidx.compose.ui:ui:1.0.0-beta06")
-    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta06")
-    implementation("androidx.compose.material:material:1.0.0-beta06")
-    implementation("androidx.compose.foundation:foundation:1.0.0-beta06")
-    implementation("androidx.compose.foundation:foundation-layout:1.0.0-beta06")
+    implementation("androidx.activity:activity-compose:1.3.0-alpha08")
+    implementation("androidx.compose.ui:ui:1.0.0-beta07")
+    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta07")
+    implementation("androidx.compose.material:material:1.0.0-beta07")
+    implementation("androidx.compose.foundation:foundation:1.0.0-beta07")
+    implementation("androidx.compose.foundation:foundation-layout:1.0.0-beta07")
 
-    implementation("com.google.accompanist:accompanist-pager:0.9.1")
+    implementation ("androidx.navigation:navigation-compose:2.4.0-alpha01")
+
+    implementation("com.google.accompanist:accompanist-pager:0.10.0")
+    implementation("com.google.accompanist:accompanist-insets:0.10.0")
 
     /*** MapBox SDK ***/
     implementation("com.mapbox.mapboxsdk:mapbox-android-sdk:9.6.1")

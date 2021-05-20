@@ -20,11 +20,10 @@ import com.mapbox.mapboxsdk.maps.Style
 
 @OptIn(ExperimentalPagerApi::class)
 @Composable
-fun MainScreen() {
+fun PagerScreen() {
 
     val pagerState = rememberPagerState(pageCount = 10)
     BoxWithConstraints(modifier = Modifier.fillMaxSize()) {
-        MapPreview()
         HorizontalPager(
             modifier = Modifier
                 .align(Alignment.Center)
@@ -33,7 +32,9 @@ fun MainScreen() {
             itemSpacing = 8.dp,
         ) { page ->
             Card(
-                modifier = Modifier.size(width = 300.dp, height = 100.dp).padding(bottom = 8.dp),
+                modifier = Modifier
+                    .size(width = 300.dp, height = 100.dp)
+                    .padding(bottom = 8.dp),
                 elevation = 4.dp,
                 backgroundColor = Color.DarkGray,
             ) {
@@ -49,12 +50,12 @@ fun MainScreen() {
 }
 
 @Composable
-fun MapPreview(mapView: MapView = rememberMapViewWithLifecycle()) {
+fun MapPreview(innerPadding: PaddingValues, mapView: MapView = rememberMapViewWithLifecycle()) {
     var mapInitialized by remember(mapView) { mutableStateOf(false) }
     LaunchedEffect(mapInitialized) {
         val mapboxMap = mapView.awaitMap()
         mapboxMap.setStyle(Style.OUTDOORS)
         mapInitialized = true
     }
-    AndroidView(factory = { mapView })
+    AndroidView(modifier = Modifier.padding(innerPadding), factory = { mapView })
 }
