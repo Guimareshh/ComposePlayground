@@ -33,7 +33,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-beta08"
+        kotlinCompilerExtensionVersion = "1.0.0-beta09"
     }
 
     flavorDimensions("default")
@@ -44,15 +44,12 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.2.3")
 
     /*** Compose Libraries ***/
-    implementation("androidx.activity:activity-compose:1.3.0-beta01")
-    implementation("androidx.compose.ui:ui:1.0.0-beta08")
-    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta08")
-    implementation("androidx.compose.material:material:1.0.0-beta08")
-    implementation("androidx.compose.foundation:foundation:1.0.0-beta08")
-    implementation("androidx.compose.foundation:foundation-layout:1.0.0-beta08")
+    implementation("androidx.activity:activity-compose:1.3.0-beta02")
+    implementation("androidx.compose.ui:ui:1.0.0-beta09")
+    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta09")
+    implementation("androidx.compose.material:material:1.0.0-beta09")
+    implementation("androidx.compose.foundation:foundation:1.0.0-beta09")
+    implementation("androidx.compose.foundation:foundation-layout:1.0.0-beta09")
 
-    implementation("com.google.accompanist:accompanist-pager:0.11.1")
-
-    /*** MapBox SDK ***/
-    implementation("com.mapbox.mapboxsdk:mapbox-android-sdk:9.6.1")
+    implementation("com.google.accompanist:accompanist-insets:0.12.0")
 }
