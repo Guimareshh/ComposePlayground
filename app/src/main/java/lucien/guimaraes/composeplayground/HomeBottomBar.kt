@@ -1,5 +1,6 @@
 package lucien.guimaraes.composeplayground
 
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -8,7 +9,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.google.accompanist.insets.navigationBarsPadding
 
 @Composable
 fun HomeBottomBar(
