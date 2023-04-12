@@ -6,15 +6,15 @@ plugins {
 
 android {
 
-    compileSdk = 30
-    buildToolsVersion = "30.0.3"
+    compileSdk = 33
+    buildToolsVersion = "33.0.2"
 
     defaultConfig {
         applicationId = "com.compose.playground"
         versionCode = 1
         versionName = "0.0.1"
         minSdk = 23
-        targetSdk = 30
+        targetSdk = 33
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -33,7 +33,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.0.0-beta09"
+        kotlinCompilerExtensionVersion = "1.4.4"
     }
 
     flavorDimensions("default")
@@ -41,15 +41,13 @@ android {
 
 dependencies {
 
-    implementation("androidx.activity:activity-ktx:1.2.3")
-
     /*** Compose Libraries ***/
-    implementation("androidx.activity:activity-compose:1.3.0-beta02")
-    implementation("androidx.compose.ui:ui:1.0.0-beta09")
-    implementation("androidx.compose.ui:ui-tooling:1.0.0-beta09")
-    implementation("androidx.compose.material:material:1.0.0-beta09")
-    implementation("androidx.compose.foundation:foundation:1.0.0-beta09")
-    implementation("androidx.compose.foundation:foundation-layout:1.0.0-beta09")
+    implementation("androidx.activity:activity-compose:1.6.1")
 
-    implementation("com.google.accompanist:accompanist-insets:0.12.0")
+    implementation(platform("androidx.compose:compose-bom:2023.04.00"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling")
+    implementation("androidx.compose.material:material")
+    implementation("androidx.compose.foundation:foundation")
+    implementation("androidx.compose.foundation:foundation-layout")
 }
