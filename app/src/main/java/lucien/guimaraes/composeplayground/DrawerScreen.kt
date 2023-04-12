@@ -4,9 +4,6 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.heightIn
 import androidx.compose.material.BottomSheetScaffold
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.rememberBottomSheetScaffoldState
@@ -35,9 +32,6 @@ fun DrawerScreen() {
             sheetContent = {
                 BoxWithConstraints {
                     val sheetNavController = rememberNavController()
-                    val maxHeightNavHost by remember {
-                        derivedStateOf { maxHeight.value.dp - 16.dp }
-                    }
                     NavHost(
                         modifier = Modifier.fillMaxSize(),
                         navController = sheetNavController,
